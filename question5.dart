@@ -55,7 +55,7 @@ abstract class Employee {
 
   void displayInfo() {
     // TODO: Display employee information
-    
+    print('Employee: $name (ID: $id, Department: $department)');
   }
 }
 
@@ -129,28 +129,25 @@ void main() {
 
 
   // TODO: Demonstrate salary calculation and payment processing for both
-   manager.displayInfo();
+  manager.displayInfo();
   print('Job Title: ${manager.getJobTitle()}');
   print('Base Salary: ${manager.getBaseSalary()}');
   var managerBonus = 1000.0; // Example bonus for the manager
-  var managerSalary =
-     
+  var managerSalary = manager.calculateSalary(manager.getBaseSalary(), managerBonus);
+
   // TODO: Generate and print report for the Manager
-   manager.calculateSalary(manager.getBaseSalary(), managerBonus);
   print('Calculated Salary: $managerSalary');
   manager.processPayment(managerSalary);
   print(manager.generateReport(manager.name, manager.department));
 
   print('');
 
-
   // TODO: Display information for both employees
   developer.displayInfo();
   print('Job Title: ${developer.getJobTitle()}');
   print('Base Salary: ${developer.getBaseSalary()}');
 
-  var developerSalary =
-      developer.calculateSalary(developer.getBaseSalary(), 500.0);
+  var developerSalary = developer.calculateSalary(developer.getBaseSalary(), 500.0);
 
   print('Calculated Salary: $developerSalary');
   developer.processPayment(developerSalary);
