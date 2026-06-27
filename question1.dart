@@ -46,8 +46,8 @@ void main() {
   // TODO: Initialize your variables with appropriate values
 
   // TODO: Calculate BMI and grade
-  var bmi = calculateBMI(68.90625, 1.75); // Example values
-  var grade = getGrade(85); // Example value
+  final bmi = calculateBMI(68.90625, 1.75); // Example values
+  final grade = getGrade(85); // Example value
 
   // TODO: Use string interpolation to display the results as shown in expected output
   print('Name: $name, Age: $age, Height: $height, Is Student: $isStudent');
